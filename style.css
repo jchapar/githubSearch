@@ -62,15 +62,25 @@ header .logo {
   color: var(--primary-text);
 }
 
-header .toggle-light {
+header .toggle-wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+header .toggle-light {
+  display: none;
+  justify-content: flex-end;
   align-items: flex-end;
+}
+
+header .toggle-light.active {
+  display: flex;
 }
 
 header .toggle-light div {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: var(--primary-text);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
