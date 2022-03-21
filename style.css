@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-family: "Space Mono", monospace;
+}
+
 /* Dark Theme */
 html {
   --primary-clr: #0079ff;
@@ -32,7 +36,7 @@ html[data-theme="light"] {
 /* Basic Styles */
 body {
   background: var(--primary-bg-clr);
-  font-family: "Space Mono", monospace;
+  font-family: var(--font-family);
 }
 
 img {
@@ -83,4 +87,59 @@ header .toggle-light div {
   text-transform: uppercase;
   color: var(--primary-text);
   margin-right: 1rem;
+}
+
+/* Search Wrapper */
+.search-wrapper {
+  background: var(--primary-card-bg);
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+.search-wrapper img {
+  margin-left: 1rem;
+}
+
+.search-wrapper input {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  width: 50%;
+  margin: 0 1rem;
+  text-align: left;
+  padding: 1rem;
+  color: var(--primary-text);
+}
+
+.search-wrapper input::placeholder {
+  color: var(--primary-text);
+  font-family: var(--font-family);
+}
+
+.search-wrapper input:focus {
+  outline: none;
+}
+
+.search-wrapper small {
+  display: none;
+  color: #f74646;
+  font-size: 1.5rem;
+  font-weight: light;
+  margin-right: 1rem;
+}
+
+.search-wrapper button {
+  background: var(--primary-clr);
+  color: var(--primary-text);
+  padding: 1rem;
+  border-radius: 1.2rem;
+  border: none;
+  font-size: 1.4rem;
+  width: 8rem;
+  height: 4.6rem;
+  font-family: var(--font-family);
 }
