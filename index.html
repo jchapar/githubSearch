@@ -1,28 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <main>
+      <!-- Main Container -->
+      <div class="container">
+        <!-- Header -->
+        <header>
+          <div class="logo">devfinder</div>
+          <div class="toggle-wrapper">
+            <div class="toggle-light">
+              <div>Light</div>
+              <img src="assets/icon-sun.svg" alt="Light Toggle Image" />
+            </div>
+            <!-- <div class="toggle-dark">
+              <div>Dark</div>
+              <img src="assets/icon-moon.svg" alt="Dark Toggle Image" />
+            </div> -->
+          </div>
+        </header>
+        <!-- Search Wrapper -->
+        <div class="search-wrapper">
+          <img src="assets/icon-search.svg" alt="Search Image" />
+          <input type="text" placeholder="Search Github username..." />
+          <small>No Results</small>
+          <button type="submit" class="search-btn">Search</button>
+        </div>
 
-  devfinder
-
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
-</body>
+        <!-- Profile -->
+        <div class="profile-wrapper">
+          <div class="profile-image-wrapper">
+            <img src="assets/favicon.JPG" alt="Profile Image" />
+          </div>
+          <div class="profile-user-wrapper">
+            <div class="profile-name">Anubis</div>
+            <div class="username">@anubis</div>
+            <div class="join-date">Joined 25 Jan 2018</div>
+          </div>
+          <div class="profile-bio-wrapper">
+            <div class="bio">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime eveniet ex explicabo corrupti reprehenderit consequatur!</div>
+            <div class="profile-stats">
+              <div class="repos">
+                <small class="title">Repos</small>
+                <p class="number">8</p>
+              </div>
+              <div class="followers">
+                <small class="title">Followers</small>
+                <p class="number">324</p>
+              </div>
+              <div class="following">
+                <small class="title">Following</small>
+                <p class="number">30</p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-social-wrapper">
+            <div class="location">
+              <img src="assets/icon-location.svg" alt="Location Image" />
+              <a href="#">Phoenix</a>
+            </div>
+            <div class="location">
+              <img src="assets/icon-location.svg" alt="Location Image" />
+              <a href="#">Phoenix</a>
+            </div>
+            <div class="location">
+              <img src="assets/icon-location.svg" alt="Location Image" />
+              <a href="#">Phoenix</a>
+            </div>
+            <div class="location">
+              <img src="assets/icon-location.svg" alt="Location Image" />
+              <a href="#">Phoenix</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    devfinder Light Dark Search GitHub username... Search Joined Repos Followers Following
+    <script src="app.js"></script>
+  </body>
 </html>
