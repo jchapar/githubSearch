@@ -57,7 +57,7 @@ a {
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 header .logo {
@@ -76,6 +76,10 @@ header .toggle-light {
   display: none;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+header .toggle-light img {
+  cursor: pointer;
 }
 
 header .toggle-light.active {
@@ -142,4 +146,85 @@ header .toggle-light div {
   width: 8rem;
   height: 4.6rem;
   font-family: var(--font-family);
+}
+
+/* Profile Wrapper */
+.profile-wrapper {
+  background: var(--primary-card-bg);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.profile-image-wrapper img {
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+}
+
+.profile-user-wrapper {
+  margin-bottom: 2rem;
+}
+
+.profile-user-wrapper .profile-name {
+  color: var(--primary-text);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-user-wrapper .username {
+  color: #0070ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-user-wrapper .join-date {
+  color: var(--primary-text);
+  font-size: 1.3rem;
+}
+
+.profile-bio-wrapper {
+  margin-bottom: 1rem;
+}
+
+.profile-bio-wrapper .bio {
+  color: var(--primary-text);
+  font-size: 1.3rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.profile-bio-wrapper .profile-stats {
+  background: var(--primary-bg-clr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--primary-text);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.profile-bio-wrapper .profile-stats .repos,
+.profile-bio-wrapper .profile-stats .followers,
+.profile-bio-wrapper .profile-stats .following {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-bio-wrapper .profile-stats .repos small,
+.profile-bio-wrapper .profile-stats .followers small,
+.profile-bio-wrapper .profile-stats .following small {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-bio-wrapper .profile-stats .repos p,
+.profile-bio-wrapper .profile-stats .followers p,
+.profile-bio-wrapper .profile-stats .following p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.profile-social-wrapper div {
+  display: flex;
 }
