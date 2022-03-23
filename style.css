@@ -155,6 +155,35 @@ header .toggle-light div {
   border-radius: 2rem;
 }
 
+.profile-wrapper.grid {
+  display: grid;
+  grid-template-areas:
+    "profileImageWrapper profileUserWrapper"
+    "profileBioWrapper profileBioWrapper"
+    "profileStatsWrapper profileStatsWrapper"
+    "profileSocialWrapper profileSocialWrapper";
+}
+
+.profile-image-wrapper {
+  grid-area: profileImageWrapper;
+}
+
+.profile-user-wrapper {
+  grid-area: profileUserWrapper;
+}
+
+.profile-bio-wrapper {
+  grid-area: profileBioWrapper;
+}
+
+.profile-stats-wrapper {
+  grid-area: profileStatsWrapper;
+}
+
+.profile-social-wrapper {
+  grid-area: profileSocialWrapper;
+}
+
 .profile-image-wrapper img {
   border-radius: 50%;
   height: 7rem;
