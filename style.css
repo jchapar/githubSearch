@@ -227,4 +227,18 @@ header .toggle-light div {
 
 .profile-social-wrapper div {
   display: flex;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+.profile-social-wrapper img {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.profile-social-wrapper a {
+  font-size: 1.3rem;
+  color: var(--primary-text);
 }
