@@ -72,21 +72,25 @@ header .toggle-wrapper {
   align-items: center;
 }
 
-header .toggle-light {
+header .toggle-light,
+header .toggle-dark {
   display: none;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-header .toggle-light img {
+header .toggle-light img,
+header .toggle-dark img {
   cursor: pointer;
 }
 
-header .toggle-light.active {
+header .toggle-light.active,
+header .toggle-dark.active {
   display: flex;
 }
 
-header .toggle-light div {
+header .toggle-light div,
+header .toggle-dark div {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: var(--primary-text);
