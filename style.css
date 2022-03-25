@@ -51,6 +51,7 @@ a {
 .container {
   margin: 0 auto;
   padding: 2rem;
+  max-width: 73rem;
 }
 
 /* Header */
@@ -161,31 +162,45 @@ header .toggle-dark div {
 
 .profile-wrapper.grid {
   display: grid;
-  grid-template-areas:
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(10rem, auto);
+  gap: 1rem;
+  justify-content: center;
+  /* grid-template-areas:
     "profileImageWrapper profileUserWrapper"
     "profileBioWrapper profileBioWrapper"
     "profileStatsWrapper profileStatsWrapper"
-    "profileSocialWrapper profileSocialWrapper";
+    "profileSocialWrapper profileSocialWrapper"; */
 }
 
 .profile-image-wrapper {
-  grid-area: profileImageWrapper;
+  /* grid-area: profileImageWrapper; */
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 .profile-user-wrapper {
-  grid-area: profileUserWrapper;
+  /* grid-area: profileUserWrapper; */
+  grid-column: 2/5;
+  grid-row: 1/2;
 }
 
 .profile-bio-wrapper {
-  grid-area: profileBioWrapper;
+  /* grid-area: profileBioWrapper; */
+  grid-column: 1/5;
+  grid-row: 2/3;
 }
 
 .profile-stats-wrapper {
-  grid-area: profileStatsWrapper;
+  /* grid-area: profileStatsWrapper; */
+  grid-column: 1/5;
+  grid-row: 3/4;
 }
 
 .profile-social-wrapper {
-  grid-area: profileSocialWrapper;
+  /* grid-area: profileSocialWrapper; */
+  grid-column: 1/5;
+  grid-row: 4/5;
 }
 
 .profile-image-wrapper img {
@@ -274,4 +289,10 @@ header .toggle-dark div {
 .profile-social-wrapper a {
   font-size: 1.3rem;
   color: var(--primary-text);
+}
+
+@media (min-width: 760px) {
+  body {
+    background: red;
+  }
 }
