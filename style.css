@@ -117,7 +117,7 @@ header .toggle-dark div {
   background: transparent;
   border: none;
   font-size: 1.3rem;
-  width: 50%;
+  width: 100%;
   margin: 0 1rem;
   text-align: left;
   padding: 1rem;
@@ -151,6 +151,7 @@ header .toggle-dark div {
   width: 8rem;
   height: 4.6rem;
   font-family: var(--font-family);
+  cursor: pointer;
 }
 
 /* Profile Wrapper */
@@ -292,7 +293,13 @@ header .toggle-dark div {
 }
 
 @media (min-width: 760px) {
-  body {
-    background: red;
+  .container {
+    max-width: 57rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .container {
+    max-width: 73rem;
   }
 }
