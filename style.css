@@ -212,6 +212,9 @@ header .toggle-dark div {
 
 .profile-user-wrapper {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-user-wrapper .profile-name {
@@ -296,10 +299,111 @@ header .toggle-dark div {
   .container {
     max-width: 57rem;
   }
+
+  .search-wrapper button {
+    font-size: 1.6rem;
+    width: 12rem;
+    height: 5rem;
+  }
+
+  .profile-wrapper {
+    padding: 4rem;
+  }
+
+  .profile-image-wrapper img {
+    height: 11rem;
+    width: 11rem;
+  }
+
+  .profile-user-wrapper {
+    padding-left: 2rem;
+  }
+
+  .profile-user-wrapper .profile-name {
+    font-size: 2.6rem;
+  }
+
+  .profile-user-wrapper .username {
+    font-size: 1.6rem;
+  }
+
+  .profile-user-wrapper .join-date {
+    font-size: 1.5rem;
+  }
+
+  .profile-bio-wrapper .bio {
+    font-size: 1.5rem;
+  }
+
+  .profile-bio-wrapper .profile-stats .repos small,
+  .profile-bio-wrapper .profile-stats .followers small,
+  .profile-bio-wrapper .profile-stats .following small {
+    font-size: 1.3rem;
+  }
+
+  .profile-bio-wrapper .profile-stats .repos p,
+  .profile-bio-wrapper .profile-stats .followers p,
+  .profile-bio-wrapper .profile-stats .following p {
+    font-size: 2.2rem;
+  }
+
+  .profile-social-wrapper {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-social-wrapper div {
+    margin-right: 1rem;
+  }
 }
 
 @media (min-width: 1100px) {
   .container {
-    max-width: 73rem;
+    max-width: 75rem;
+  }
+
+  .search-wrapper input {
+    font-size: 1.6rem;
+  }
+
+  .profile-image-wrapper img {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .profile-image-wrapper {
+    /* grid-area: profileImageWrapper; */
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .profile-user-wrapper {
+    /* grid-area: profileUserWrapper; */
+    grid-column: 2/5;
+    grid-row: 1/2;
+  }
+
+  .profile-bio-wrapper {
+    /* grid-area: profileBioWrapper; */
+    grid-column: 2/5;
+    grid-row: 2/3;
+  }
+
+  .profile-stats-wrapper {
+    /* grid-area: profileStatsWrapper; */
+    grid-column: 2/5;
+    grid-row: 3/4;
+  }
+
+  .profile-social-wrapper {
+    /* grid-area: profileSocialWrapper; */
+    grid-column: 2/5;
+    grid-row: 4/5;
+  }
+
+  .profile-social-wrapper a {
+    font-size: 1.5rem;
+    color: var(--primary-text);
   }
 }
