@@ -139,11 +139,12 @@ header .toggle-dark div {
   font-size: 1.5rem;
   font-weight: light;
   margin-right: 1rem;
+  width: 20rem;
 }
 
 .search-wrapper button {
   background: var(--primary-clr);
-  color: var(--primary-text);
+  color: #ffffff;
   padding: 1rem;
   border-radius: 1.2rem;
   border: none;

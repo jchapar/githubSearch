@@ -6,6 +6,7 @@ const toggleDark = document.querySelector(".toggle-dark");
 const htmlElement = document.documentElement;
 const searchInput = document.querySelector("#search-input");
 const searchBtn = document.querySelector("#search-btn");
+const errorMsg = document.querySelector("#error-message");
 
 // Theme Toggle
 toggleLight.addEventListener("click", () => {
@@ -34,7 +35,7 @@ searchBtn.addEventListener("click", (e) => {
   if (userText !== "") {
     github.getUser(userText).then((data) => {
       if (data.profileData.message === "Not Found") {
-        console.log("Not Found");
+        errorMsg.style.display = "block";
       } else {
         ui.showProfile(data.profileData);
       }
