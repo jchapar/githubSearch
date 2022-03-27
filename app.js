@@ -26,6 +26,13 @@ const github = new Github();
 // Init UI
 const ui = new UI();
 
+// Load Octocat profile
+document.addEventListener("DOMContentLoaded", () => {
+  github.getUser("Octocat").then((data) => {
+    ui.showProfile(data.profileData);
+  });
+});
+
 // Get Search Input
 searchBtn.addEventListener("click", (e) => {
   console.log(searchInput.value);
@@ -38,8 +45,14 @@ searchBtn.addEventListener("click", (e) => {
         errorMsg.style.display = "block";
       } else {
         ui.showProfile(data.profileData);
+        clearFields();
       }
     });
   }
   e.preventDefault();
 });
+
+// Clear input fields
+function clearFields() {
+  searchInput.value = "";
+}
