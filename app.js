@@ -20,8 +20,25 @@ toggleDark.addEventListener("click", () => {
   toggleDark.classList.remove("active");
 });
 
+// Init Github
+const github = new Github();
+// Init UI
+const ui = new UI();
+
 // Get Search Input
 searchBtn.addEventListener("click", (e) => {
   console.log(searchInput.value);
+
+  const userText = searchInput.value;
+
+  if (userText !== "") {
+    github.getUser(userText).then((data) => {
+      if (data.profileData.message === "Not Found") {
+        console.log("Not Found");
+      } else {
+        ui.showProfile(data.profileData);
+      }
+    });
+  }
   e.preventDefault();
 });
