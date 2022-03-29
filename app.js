@@ -43,6 +43,10 @@ searchBtn.addEventListener("click", (e) => {
     github.getUser(userText).then((data) => {
       if (data.profileData.message === "Not Found") {
         errorMsg.style.display = "block";
+        setTimeout(function () {
+          errorMsg.style.display = "none";
+          clearFields();
+        }, 3000);
       } else {
         ui.showProfile(data.profileData);
         clearFields();
